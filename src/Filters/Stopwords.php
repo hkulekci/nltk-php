@@ -4,7 +4,7 @@
  * @author    Haydar KULEKCI <haydarkulekci@gmail.com>
  */
 
-namespace Nltk\Corpus;
+namespace Nltk\Filters;
 
 use Nltk\Config;
 use Nltk\Exceptions\MissingPackage;

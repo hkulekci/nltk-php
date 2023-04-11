@@ -4,10 +4,10 @@
  * @author    Haydar KULEKCI <haydarkulekci@gmail.com>
  */
 
-namespace NltkTest\Corpus;
+namespace NltkTest;
 
-use Nltk\Corpus\Stopwords;
 use Nltk\Downloader;
+use Nltk\Filters\Stopwords;
 use PHPUnit\Framework\TestCase;
 
 class StopwordsTest extends TestCase
