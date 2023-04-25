@@ -20,7 +20,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "guzzlehttp/guzzle": "^7.5"
+        "guzzlehttp/guzzle": "^7.5",
+        "ext-mbstring": "*"
     },
     "scripts": {
         "test": "vendor/bin/phpunit"

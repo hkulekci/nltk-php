@@ -9,7 +9,7 @@ namespace Nltk\Filters;
 use Nltk\Config;
 use Nltk\Exceptions\MissingPackage;
 
-class Stopwords
+class Stopwords implements FilterInterface
 {
     protected string $language;
     protected array $stopwords;
@@ -36,7 +36,7 @@ class Stopwords
         $this->stopwords = $stopwords;
     }
 
-    public function stop($tokens): array
+    public function filter(array $tokens): array
     {
         $result = [];
         foreach ($tokens as $token) {
