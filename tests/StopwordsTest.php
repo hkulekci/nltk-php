@@ -22,7 +22,7 @@ class StopwordsTest extends TestCase
     public function testStopWord(): void
     {
         $stopwords = new Stopwords();
-        $filtered = $stopwords->stop(['Harry', 'Potter', 'the', 'Prisoner', 'of', 'Azkaban']);
+        $filtered = $stopwords->filter(['Harry', 'Potter', 'the', 'Prisoner', 'of', 'Azkaban']);
 
         $this->assertNotContains('the', $filtered);
         $this->assertNotContains('of', $filtered);
@@ -30,9 +30,9 @@ class StopwordsTest extends TestCase
 
     public function testStopWordFrench(): void
     {
-        $stopwords = new Stopwords('french');
+        $stopwords = new Stopwords(['language' => 'french']);
 
-        $filtered = $stopwords->stop(['Est-ce', 'que', 'ce', 'musée', 'est', 'loin', 'd’ici']);
+        $filtered = $stopwords->filter(['Est-ce', 'que', 'ce', 'musée', 'est', 'loin', 'd’ici']);
 
         $this->assertNotContains('que', $filtered);
         $this->assertNotContains('ce', $filtered);
@@ -41,9 +41,9 @@ class StopwordsTest extends TestCase
 
     public function testStopWordTurkish(): void
     {
-        $stopwords = new Stopwords('turkish');
+        $stopwords = new Stopwords(['language' => 'turkish']);
 
-        $filtered = $stopwords->stop(['Yapılması', 'gereken', 'daha', 'birkaç', 'işimiz', 'var']);
+        $filtered = $stopwords->filter(['Yapılması', 'gereken', 'daha', 'birkaç', 'işimiz', 'var']);
 
         $this->assertNotContains('data', $filtered);
         $this->assertNotContains('birkaç', $filtered);

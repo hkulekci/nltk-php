@@ -14,10 +14,10 @@ class Stopwords implements FilterInterface
     protected string $language;
     protected array $stopwords;
 
-    public function __construct($language = 'english')
+    public function __construct(array $options = [])
     {
-        $this->language = $language;
-        $file = Config::get('DATA_DIR') . 'corpora/stopwords/' . $language;
+        $this->language = $options['language'] ?? 'english';
+        $file = Config::get('DATA_DIR') . 'corpora/stopwords/' . $this->language;
         if (!file_exists($file)) {
             throw new MissingPackage('You need to download to use stop words!');
         }

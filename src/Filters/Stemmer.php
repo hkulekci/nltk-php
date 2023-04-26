@@ -10,8 +10,8 @@ class Stemmer
 {
     protected string $language;
 
-    public function __construct(string $language)
+    public function __construct(array $options = [])
     {
-
+        $this->language = $options['language'] ?? 'en';
     }
 }
