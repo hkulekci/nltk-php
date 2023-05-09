@@ -5,7 +5,7 @@
  */
 namespace NltkTest;
 
-use Nltk\Tokenizer;
+use Nltk\Tokenizers\Tokenizer;
 use Nltk\Tokenizers\SentenceTokenizer;
 use Nltk\Tokenizers\WhiteSpaceTokenizer;
 use PHPUnit\Framework\TestCase;
@@ -17,6 +17,15 @@ class TokenizerTest extends TestCase
         $tokenizer = new WhiteSpaceTokenizer();
         $this->assertEquals(
             ['Harry', 'Potter', 'the', 'Prisoner', 'of', 'Azkaban'],
+            $tokenizer->tokenize('Harry Potter the Prisoner of Azkaban')
+        );
+    }
+
+    public function testTokenizer(): void
+    {
+        $tokenizer = new Tokenizer();
+        $this->assertEquals(
+            ['Harry Potter the Prisoner of Azkaban'],
             $tokenizer->tokenize('Harry Potter the Prisoner of Azkaban')
         );
     }
