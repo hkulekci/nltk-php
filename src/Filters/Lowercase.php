@@ -10,10 +10,8 @@ class Lowercase implements FilterInterface
 {
     public function filter(array $tokens): array
     {
-        foreach ($tokens as $index => $token) {
-            $tokens[$index] = mb_strtolower($token);
-        }
-
-        return $tokens;
+        return array_map(static function($token) {
+            return mb_strtolower($token);
+        }, $tokens);
     }
 }
