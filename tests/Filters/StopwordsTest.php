@@ -4,7 +4,7 @@
  * @author    Haydar KULEKCI <haydarkulekci@gmail.com>
  */
 
-namespace NltkTest;
+namespace NltkTest\Filters;
 
 use Nltk\Downloader;
 use Nltk\Filters\Stopwords;

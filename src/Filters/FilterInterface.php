@@ -1,6 +1,6 @@
 <?php
 /**
- * TokenizerInterface.php
+ * TokenizerInterface
  *
  * @since     Apr 2023
  * @author    Haydar KULEKCI <haydarkulekci@gmail.com>

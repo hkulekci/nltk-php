@@ -3,10 +3,10 @@
  * @since     Mar 2023
  * @author    Haydar KULEKCI <haydarkulekci@gmail.com>
  */
-namespace NltkTest;
+namespace NltkTest\Tokenizers;
 
-use Nltk\Tokenizers\Tokenizer;
 use Nltk\Tokenizers\SentenceTokenizer;
+use Nltk\Tokenizers\Tokenizer;
 use Nltk\Tokenizers\WhiteSpaceTokenizer;
 use PHPUnit\Framework\TestCase;
 
