@@ -1,2 +1,9 @@
-vendor
-.phpunit.cache
+.idea/
+.fleet/
+.vscode/
+.phpunit.cache/
+/build/
+/data/
+/vendor/
+phpunit.result.cache
+phpunit.xml
